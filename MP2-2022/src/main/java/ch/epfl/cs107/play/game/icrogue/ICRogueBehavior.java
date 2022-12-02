@@ -6,18 +6,19 @@ import ch.epfl.cs107.play.game.areagame.handler.AreaInteractionVisitor;
 import ch.epfl.cs107.play.game.icrogue.actor.ICRoguePlayer;
 import ch.epfl.cs107.play.window.Window;
 
-public class ICRogueBehavior {
+public class ICRogueBehavior extends AreaBehavior {
 
     public class ICRogueCell extends AreaBehavior.Cell {
-
+         private ICRogueBehavior.ICRogueCellType type;
         /**
          * Default Cell constructor
          *
          * @param x (int): x-coordinate of this cell
          * @param y (int): y-coordinate of this cell
          */
-        public ICRogueCell(int x, int y) {
+        public ICRogueCell(int x, int y, ICRogueBehavior.ICRogueCellType type) {
             super(x, y);
+            this.type=type;
         }
 
         @Override
@@ -79,7 +80,7 @@ public class ICRogueBehavior {
      * @param name (String): Name of the Behavior, not null
      */
     public ICRogueBehavior(Window window, String name){
-        super();
+        super(window, name);
         int height = getHeight();
         int width = getWidth();
         for(int y = 0; y < height; y++) {

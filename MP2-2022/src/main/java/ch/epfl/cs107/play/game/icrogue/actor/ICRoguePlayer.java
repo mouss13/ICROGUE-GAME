@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ICRoguePlayer {
-
+/*
     private float hp;
     private TextGraphics message;
     private Sprite sprite;
@@ -25,20 +25,21 @@ public class ICRoguePlayer {
      * Demo actor
      *
      */
+    /*
     public ICRoguePlayer(Area owner, Orientation orientation, DiscreteCoordinates coordinates, String spriteName) {
         super(owner, orientation, coordinates);
         this.hp = 10;
         message = new TextGraphics(Integer.toString((int)hp), 0.4f, Color.BLUE);
         message.setParent((Positionable) this);
         message.setAnchor(new Vector(-0.3f, 0.1f));
-        sprite = new Sprite(spriteName, 1.f, 1.f,this);
+        sprite = new Sprite(spriteName, 1.f, 1.f, (Positionable) this);
 
-        resetMotion();
     }
 
     /**
      * Center the camera on the player
      */
+    /*
     public void centerCamera() {
         getOwnerArea().setViewCandidate(this);
     }
@@ -67,6 +68,7 @@ public class ICRoguePlayer {
      * @param orientation (Orientation): given orientation, not null
      * @param b (Button): button corresponding to the given orientation, not null
      */
+    /*
     private void moveIfPressed(Orientation orientation, ch.epfl.cs107.play.window.Button b){
         if(b.isDown()) {
             if (!isDisplacementOccurs()) {
@@ -79,6 +81,7 @@ public class ICRoguePlayer {
     /**
      * Leave an area by unregister this player
      */
+    /*
     public void leaveArea(){
         getOwnerArea().unregisterActor(this);
     }
@@ -88,6 +91,7 @@ public class ICRoguePlayer {
      * @param area (Area): initial area, not null
      * @param position (DiscreteCoordinates): initial position, not null
      */
+    /*
     public void enterArea(Area area, DiscreteCoordinates position){
         area.registerActor(this);
         area.setViewCandidate(this);
@@ -111,7 +115,9 @@ public class ICRoguePlayer {
 
     ///Ghost implements Interactable
 
+/*
 
+     */
 }
 
 
