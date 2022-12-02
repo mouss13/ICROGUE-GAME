@@ -4,6 +4,11 @@ import ch.epfl.cs107.play.game.icrogue.area.ICRogueRoom;
 import ch.epfl.cs107.play.math.DiscreteCoordinates;
 
 public class Level10Room extends ICRogueRoom {
+    public void Level0Room(DiscreteCoordinates roomCoordinates){
+        super(behaviorName, roomCoordinates);
+
+    }
+
     ICRogueRoom level = new ICRogueRoom() {
         @Override
         public float getCameraScaleFactor() {

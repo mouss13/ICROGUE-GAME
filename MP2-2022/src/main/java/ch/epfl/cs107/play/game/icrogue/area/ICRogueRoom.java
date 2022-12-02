@@ -7,7 +7,11 @@ import ch.epfl.cs107.play.math.DiscreteCoordinates;
 
 public abstract class ICRogueRoom extends Area {
 
-    ICRogueRoom(String behaviorName , DiscreteCoordinates roomCoordinates)
+    ICRogueRoom(String behaviorName , DiscreteCoordinates roomCoordinates){
+
+        behaviorName = "icrogue/Level0Room";
+
+    }
     @Override
     public String getTitle() {
         return "ICRogueRoom";
