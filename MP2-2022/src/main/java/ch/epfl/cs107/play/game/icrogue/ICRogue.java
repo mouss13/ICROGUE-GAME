@@ -13,7 +13,6 @@ import ch.epfl.cs107.play.window.Window;
 
 
 public class ICRogue extends AreaGame {
-    private ICRoguePlayer player ;
     Level10Room level;
     private int areaIndex;
     public String getTitle() {
@@ -23,6 +22,8 @@ public class ICRogue extends AreaGame {
     private final String[] areas={"icrogue/Level0Room"};
     private void initLevel(){
         level= new Level10Room("icrogue/Level0Room" ,new DiscreteCoordinates(0,0));
+        addArea(level);
+        setCurrentArea(level.getTitle(), true);
     }
     public boolean begin(Window window, FileSystem fileSystem){
         if (super.begin(window, fileSystem)) {
@@ -39,13 +40,9 @@ public class ICRogue extends AreaGame {
     @Override
     public void end() {
     }
-    //protected void switchArea() {
-
-
-
-        //Tuto2Area currentArea = (Tuto2Area)setCurrentArea(areas[areaIndex], false);
-
-    //}
+    protected void switchArea() {
+        Tuto2Area currentArea = (Tuto2Area)setCurrentArea(areas[areaIndex], false);
+    }
     private void initArea(String areaKey) {
 
         Tuto2Area area = (Tuto2Area)setCurrentArea(areaKey, true);
