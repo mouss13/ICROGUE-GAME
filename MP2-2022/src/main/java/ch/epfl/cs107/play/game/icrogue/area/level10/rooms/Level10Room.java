@@ -10,6 +10,7 @@ public class Level10Room extends ICRogueRoom {
         super(behaviorName, roomCoordinates);
     }
 
+
     @Override
     public DiscreteCoordinates getPlayerSpawnPosition() {
         return super.getPlayerSpawnPosition();
