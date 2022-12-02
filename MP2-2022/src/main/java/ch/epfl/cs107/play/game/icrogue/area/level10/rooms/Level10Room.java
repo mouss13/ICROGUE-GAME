@@ -5,7 +5,7 @@ import ch.epfl.cs107.play.math.DiscreteCoordinates;
 
 public class Level10Room extends ICRogueRoom {
     public void Level0Room(DiscreteCoordinates roomCoordinates){
-        super(behaviorName, roomCoordinates);
+        //super(behaviorName, roomCoordinates);
 
     }
 
@@ -15,6 +15,13 @@ public class Level10Room extends ICRogueRoom {
             return 0;
         }
     };
+
+    //ICRogueRoom level ;
+
+    public Level10Room(String behaviorName, DiscreteCoordinates roomCoordinates) {
+        super(behaviorName, roomCoordinates);
+    }
+
 
     @Override
     public DiscreteCoordinates getPlayerSpawnPosition() {

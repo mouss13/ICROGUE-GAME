@@ -10,8 +10,6 @@ public class ICRogueBehavior extends AreaBehavior {
 
     public class ICRogueCell extends AreaBehavior.Cell {
 
-        private ICRogueBehavior.ICRogueCellType type;
-
         /**
          * Default Cell constructor
          *
@@ -20,8 +18,7 @@ public class ICRogueBehavior extends AreaBehavior {
          */
         public ICRogueCell(int x, int y, ICRogueBehavior.ICRogueCellType type) {
             super(x, y);
-            this.type = type;
-
+            this.type=type;
         }
 
         @Override
@@ -83,7 +80,7 @@ public class ICRogueBehavior extends AreaBehavior {
      * @param name (String): Name of the Behavior, not null
      */
     public ICRogueBehavior(Window window, String name){
-        super(window, name);
+        super();
         int height = getHeight();
         int width = getWidth();
         for(int y = 0; y < height; y++) {
