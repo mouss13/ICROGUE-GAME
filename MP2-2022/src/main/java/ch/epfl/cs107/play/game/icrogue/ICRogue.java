@@ -19,7 +19,8 @@ public class ICRogue extends AreaGame {
     }
 
     private final String[] areas={" "};
-    private void createAreas(){
+    private void initLevel(){
+        setCurrentArea()
 
     }
     public boolean begin(Window window, FileSystem fileSystem) {
